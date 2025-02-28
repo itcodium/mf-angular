@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "micro": {
+    "mf-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,9 +17,9 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/micro",
+            "outputPath": "dist/mf-angular",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.single-spa.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -35,10 +35,9 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "main": "src/main.single-spa.ts",
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
-              "libraryName": "micro",
+              "libraryName": "mf-angular",
               "libraryTarget": "umd"
             },
             "deployUrl": "http://localhost:5200/"
@@ -72,10 +71,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "micro:build:production"
+              "buildTarget": "mf-angular:build:production"
             },
             "development": {
-              "buildTarget": "micro:build:development"
+              "buildTarget": "mf-angular:build:development"
             }
           },
           "defaultConfiguration": "development"

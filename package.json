@@ -1,5 +1,5 @@
 {
-  "name": "micro",
+  "name": "mf-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:single-spa:micro": "ng build micro --configuration production",
-    "serve:single-spa:micro": "ng s --project micro --disable-host-check --port 5200 --live-reload false"
+    "build:single-spa:mf-angular": "ng build mf-angular --configuration production",
+    "serve:single-spa:mf-angular": "ng s --project mf-angular --disable-host-check --port 5200 --live-reload false"
   },
   "private": true,
   "dependencies": {
@@ -27,7 +27,7 @@
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular-builders/custom-webpack": "18.0.0",
+    "@angular-builders/custom-webpack": "^18.0.0",
     "@angular-devkit/build-angular": "^18.0.5",
     "@angular/cli": "^18.0.5",
     "@angular/compiler-cli": "^18.0.0",
