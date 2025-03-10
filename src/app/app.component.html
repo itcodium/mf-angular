@@ -1,6 +1,43 @@
 
 <h1>Boton de zurich</h1>
 
+<section class="d-flex h-100 text-center text-bg-dark m-5">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <za-button config="primary" (click)="open(content)" >
+      Launch demo modal
+    </za-button>
+  </div>
+</section>
+ 
+<ngb-alert [dismissible]="false">
+	<strong>Warning!</strong> Better check yourself, you're not looking too good.
+</ngb-alert>
+ 
+<button
+	type="button"
+	class="btn btn-outline-secondary me-2"
+	placement="end"
+	ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+	popoverTitle="Popover on right"
+>
+	Popover on right
+</button>
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <p>Hello, World!</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="c('Save click')">Save</button>
+  </div>
+</ng-template>
+
+
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header">

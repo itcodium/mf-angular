@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { EmptyRouteComponent } from './empty-route/empty-route.component';
 import { ZaButton } from '@zurich/angular-components';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgbModal, NgbModalConfig, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ZaButton
+    ZaButton, NgbModule, NgbAlertModule, NgbPopoverModule,
   ],
-  providers: [],
+  providers: [NgbModalConfig, NgbModal],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
